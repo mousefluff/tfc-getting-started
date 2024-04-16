@@ -19,7 +19,7 @@
 
 resource "fakewebservices_vpc" "primary_vpc" {
   name       = "Primary VPC"
-  cidr_block = "0.0.0.0/1"
+  cidr_block = "0.0.0.0/24"
 }
 
 resource "fakewebservices_server" "servers" {
